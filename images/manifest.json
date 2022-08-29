@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Color Champ Launcher",
+    "description": "Quick launh Color Champ",
+    "version": "1.0.0",
+    "icons": {"128": "icon_128.png"},
+    "broaswer_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+}

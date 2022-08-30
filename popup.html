@@ -65,20 +65,48 @@
         .saved-color:not(:last-of-type) {
             margin-bottom: 5px;
         }
+        
+        .modal-header {
+            display: felx;
+            font-family: monospace;
+            font-size: 15px;
+            align-items: center;
+            border-bottom: 0.5px solid #dadada;
+        }
+
+        .modal-content {
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        .version {
+            color: #444;
+            font-size: 12px;
+
+        }
+
+        .logo {
+            padding: 16px;
+        }
+
+        .logo-icon {
+            vertical-align: text-bottom;
+            margin-right: 12px;
+        }
+
 
     </style>
 </head>
 <body>
-    <!--
+    <!---->
     <div class="modal-header">
         <h1 class="logo">
-            <img src="images/colorchamp-logo.png" alt="Color Champ Launcher" class="logo-icon"> Color Champ Launcher <span class="version"> (1.0.0)</span>
+            <img src="images/color_champ_logo.png" alt="Color Champ Logo" class="logo-icon"> Color Champ <span class="version"> (1.0.0)</span>
         </h1>
     </div>
-    <div class="modal-header">
-        <p>Easily access Color Champ content</p>
+    <div class="modal-content">
+        <p>Color Champ Tool</p>
     </div>
-    -->
     <div class="container">
         <div class="colorjoe"></div>
         <div class="config">
@@ -146,8 +174,6 @@
             }
         }
         const cp = new ColorPicker(document.querySelector(".container"));
-        // const cj = colorjoe.rgb(document.querySelector(".colorjoe"));
-        // cj.show();
     </script>
 </body>
 </html>

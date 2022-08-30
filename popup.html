@@ -54,12 +54,24 @@
             margin-bottom: 15px;
         }
 
-        .selected-color,
-        .saved-color {
+        .selected-color {
             height: 15px;
             border-radius: 3px;
             border: 1px solid #eeeeee;
             cursor: pointer;
+        }
+
+        .saved-color {
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid #eeeeee;
+            cursor: pointer;
+        }
+
+        .saved-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px 10px;
         }
 
         .saved-color:not(:last-of-type) {
@@ -76,7 +88,14 @@
 
         .modal-content {
             font-family: monospace;
+            text-align: left;
             font-size: 18px;
+        }
+        
+        .botton-description {
+            font-family: monospace;
+            text-align: left;
+            font-size: 12px;
         }
 
         .version {
@@ -114,12 +133,18 @@
             <div class="selected-color-text"></div>
             <div class="selected-color"></div>
             <div class="config-title">Saved Colors</div>
-            <div class="saved-color"></div>
-            <div class="saved-color"></div>
-            <div class="saved-color"></div>
-            <div class="saved-color"></div>
-            <div class="saved-color"></div>
+            <div class="saved-grid">
+                <div class="saved-color"></div>
+                <div class="saved-color"></div>
+                <div class="saved-color"></div>
+                <div class="saved-color"></div>
+                <div class="saved-color"></div>
+                <div class="saved-color"></div>
+            </div>
         </div>
+    </div>
+    <div class="botton-description">
+        <p>After selecting a color, click on a square with the <i><b>scroll button</b></i> to save!</p>
     </div>
     <script>
         class ColorPicker {
@@ -154,7 +179,7 @@
 
             getSavedColors() {
                 const saved = JSON.parse(localStorage.getItem("colorpicker-saved") || "[]");
-                return new Array(5).fill("#ffffff").map((defaultColor, i) => {
+                return new Array(6).fill("#ffffff").map((defaultColor, i) => {
                     return saved[i] || defaultColor;
                 });
             }

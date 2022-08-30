@@ -26,9 +26,50 @@
             margin-right: 0;
         }
 
+        .container {
+            display: flex;
+            width: 500px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        .config {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        .config-title {
+            text-align: center;
+            padding: 15px 0;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .selected-color-text {
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .selected-color,
+        .saved-color {
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid #eeeeee;
+            cursor: pointer;
+        }
+
+        .saved-color:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+
     </style>
 </head>
 <body>
+    <!--
     <div class="modal-header">
         <h1 class="logo">
             <img src="images/colorchamp-logo.png" alt="Color Champ Launcher" class="logo-icon"> Color Champ Launcher <span class="version"> (1.0.0)</span>
@@ -37,6 +78,7 @@
     <div class="modal-header">
         <p>Easily access Color Champ content</p>
     </div>
+    -->
     <div class="container">
         <div class="colorjoe"></div>
         <div class="config">
@@ -52,8 +94,24 @@
         </div>
     </div>
     <script>
-        const cj = colorjoe.rgb(document.querySelector(".colorjoe"));
-        cj.show();
+        class ColorPicker {
+            //
+            constructor(root) {
+                //
+                this.root = root;
+                this.colorjoe = colorjoe.rgb(this.root.querySelector(".colorjoe"));
+                this.selectedColor = null;
+                this.savedColors = this.getSavedColors();
+                this.colorjoe.show()
+            }
+
+            getSavedColors() {
+                return ["#ffffff", "#00ffff", "#ffffff", "#ffffff", "#ffffff"]
+            }
+        }
+        const cp = new ColorPicker(document.querySelector(".container"));
+        // const cj = colorjoe.rgb(document.querySelector(".colorjoe"));
+        // cj.show();
     </script>
 </body>
 </html>

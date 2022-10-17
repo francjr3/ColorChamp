@@ -117,15 +117,17 @@
     </style>
 </head>
 <body>
-    <!---->
+    <!-- Logo Header -->
     <div class="modal-header">
         <h1 class="logo">
             <img src="images/color_champ_logo.png" alt="Color Champ Logo" class="logo-icon"> Color Champ <span class="version"> (1.0.0)</span>
         </h1>
     </div>
     <div class="modal-content">
-        <p>Color Champ Tool</p>
+        <h3>Color Champ Tool</h3>
+        <p>Click on a square with the <i><b>scroll button</b></i> to save!</p>
     </div>
+    <!-- Color Saver -->
     <div class="container">
         <div class="colorjoe"></div>
         <div class="config">
@@ -143,9 +145,36 @@
             </div>
         </div>
     </div>
-    <div class="botton-description">
-        <p>After selecting a color, click on a square with the <i><b>scroll button</b></i> to save!</p>
+    <!-- Pallet Maker -->
+    <div class="modal-content">
+        <h3>Colour Palette</h3>
+        <p>Press [<button class="generator-button">Space</button>] to generate a new palette</p>
+
+        <div class="colors">
+            <div class="color">
+                <button class="lock-toggle"><img src="images/closed_lock.svg" /></button>
+                <input type="text" class="color-input" value="#000000" />
+                <button class="copy-hex">Copy</button>
+            </div>
+            <div class="color">
+                <button class="lock-toggle"><img src="images/closed_lock.svg" /></button>
+                <input type="text" class="color-input" value="#000000" />
+                <button class="copy-hex">Copy</button>
+            </div>
+            <div class="color">
+                <button class="lock-toggle"><img src="images/closed_lock.svg" /></button>
+                <input type="text" class="color-input" value="#000000" />
+                <button class="copy-hex">Copy</button>
+            </div>
+            <div class="color">
+                <button class="lock-toggle"><img src="images/closed_lock.svg" /></button>
+                <input type="text" class="color-input" value="#000000" />
+                <button class="copy-hex">Copy</button>
+            </div>
+
+        </div>
     </div>
+    <!-- Description Footer -->
     <script src="popup.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Pallette Generator
+// Palette Generator
 
 class Color {
 	constructor(hex, element) {

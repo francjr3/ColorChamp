@@ -1,0 +1,104 @@
+body {
+    background: #eeeeee;
+    margin: 20px;
+}
+
+.colorPicker {
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+.colorPicker .oned {
+    margin-right: 0;
+}
+
+.container {
+    display: flex;
+    width: 500px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.config {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.config-title {
+    text-align: center;
+    padding: 15px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.selected-color-text {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.selected-color {
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+}
+
+.saved-color {
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+}
+
+.saved-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 10px;
+}
+
+.saved-color:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.modal-header {
+    display: felx;
+    font-family: monospace;
+    font-size: 15px;
+    align-items: center;
+    border-bottom: 0.5px solid #dadada;
+}
+
+.modal-content {
+    font-family: monospace;
+    text-align: left;
+    font-size: 18px;
+}
+
+.botton-description {
+    font-family: monospace;
+    text-align: left;
+    font-size: 12px;
+}
+
+.version {
+    color: #444;
+    font-size: 12px;
+
+}
+
+.logo {
+    padding: 16px;
+}
+
+.logo-icon {
+    vertical-align: text-bottom;
+    margin-right: 12px;
+}
+
+
+
